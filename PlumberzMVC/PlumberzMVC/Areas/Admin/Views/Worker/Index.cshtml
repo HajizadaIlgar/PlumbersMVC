@@ -1,0 +1,41 @@
+﻿@model List<Worker>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Worker</h6>
+        <a class="btn btn-primary" asp-controller="Worker" asp-action="Create">Yarat</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Image</th>
+                        <th>FullName</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th style="text-align:center" colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td><img src="~/imgs/workers/@item.ImageUrl" width="70" /></td>
+                            <td>@item.FullName</td>
+                            <td>@item.Department?.DepartmentName</td>
+                            <td>@item.Designation</td>
+                            <td><a class="btn btn-success" asp-controller="Worker" asp-action="Update" asp-route-id="@item.Id">Dəyiş</a></td>
+                            <td><a class="btn btn-danger" asp-controller="Worker" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
