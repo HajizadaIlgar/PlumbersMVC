@@ -1,13 +1,26 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PlumberzMVC.Contexts;
+using PlumberzMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<PlumbersDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("MYSqlCode"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("MYSqlHome"));
 });
 builder.Services.AddControllersWithViews();
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.User.RequireUniqueEmail = false;
+    opt.Password.RequiredLength = 3;
+    opt.Password.RequireDigit = false;
+    opt.Password.RequireLowercase = false;
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequireUppercase = false;
+    opt.Lockout.MaxFailedAccessAttempts = 4;
+    //opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromDays(20);
+}).AddDefaultTokenProviders().AddEntityFrameworkStores<PlumbersDbContext>();
 
 var app = builder.Build();
 

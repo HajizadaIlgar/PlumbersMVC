@@ -1,0 +1,180 @@
+﻿@using PlumberzMVC.ViewModels
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+<style>
+    /* Ümumi Stil */
+    body {
+        background-color: #f4f4f9;
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Login/Register Form Qutusu */
+    .htc__login__register__wrap {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px 40px;
+        margin-top: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .htc__login__register__wrap:hover {
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tab Menu */
+    .login__register__menu {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .login__register__menu li {
+        display: inline;
+    }
+
+    .login__register__menu a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #666;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .login__register__menu a.active,
+    .login__register__menu a:hover {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    /* Input Sahələri */
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input:focus {
+        border-color: #dc3545;
+        box-shadow: 0px 0px 5px rgba(220, 53, 69, 0.5);
+        outline: none;
+    }
+
+    /* Checkbox Sahəsi */
+    .tabs__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tabs__checkbox input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        accent-color: #dc3545;
+    }
+
+    /* Validation Mesajları */
+    .text-danger {
+        font-size: 14px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    /* Forget Links */
+    .btnsmall {
+        font-size: 14px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #dc3545;
+        border: 1px solid #dc3545;
+        border-radius: 5px;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btnsmall:hover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    /* Login Düyməsi */
+    .htc__login__btn .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #dc3545;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .htc__login__btn .btn:hover {
+        background-color: #c82333;
+    }
+
+   
+</style>
+
+<!-- Start Login Register Area -->
+<div class="htc__login__register bg__white ptb--130" style="background: rgba(0, 0, 0, 0) url(images/bg/5.jpg) no-repeat scroll center center / cover ;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <ul class="login__register__menu nav justify-contend-center">
+                    <li class="login active"><a class="active" asp-action="Login">Login</a></li>
+                    <li class="register"><a asp-action="Register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Start Login Register Content -->
+        <div class="row tab-content justify-content-center">
+            <div class="col-md-6  ml-auto mr-auto">
+                <div class="htc__login__register__wrap">
+                    <!-- Start Single Content -->
+                    <div id="login" class="single__tabs__panel tab-pane active show">
+                        <form class="login" method="post">
+                            <input asp-for="UsernameOrEmail" placeholder="Username or Email">
+                            <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                            <input asp-for="Password" placeholder="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <div class="tabs__checkbox">
+                                <input asp-for="RememberMe">
+                                <span> Remember me</span>
+                            </div>
+                            <div class="mb-3 border-bottom">
+                            </div>
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                            <div class="htc__login__btn mt--30">
+                                <button class="btn btn-danger">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End Single Content -->
+                </div>
+            </div>
+        </div>
+        <!-- End Login Register Content -->
+    </div>
+</div>

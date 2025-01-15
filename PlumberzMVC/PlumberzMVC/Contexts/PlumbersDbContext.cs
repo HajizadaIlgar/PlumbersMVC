@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PlumberzMVC.Models;
 
 namespace PlumberzMVC.Contexts;
 
-public class PlumbersDbContext : DbContext
+public class PlumbersDbContext : IdentityDbContext<AppUser>
 {
     public PlumbersDbContext(DbContextOptions opt) : base(opt) { }
 

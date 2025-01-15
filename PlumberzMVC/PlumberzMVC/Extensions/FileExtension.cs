@@ -16,7 +16,7 @@ public static class FileExtension
         {
             Directory.CreateDirectory(path);
         }
-        string newfilename = Path.GetExtension(file.FileName);
+        string newfilename = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
         using (Stream st = File.Create(Path.Combine(path, newfilename)))
         {
             await file.CopyToAsync(st);
