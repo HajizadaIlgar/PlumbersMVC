@@ -7,7 +7,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Worker create</h6>
     </div>
     <div class="card-body">
-        <form enctype="multipart/form-data" method="post">
+        <form id="islepls" enctype="multipart/form-data" method="post">
             <div class="form-group">
                 <label asp-for="FullName"></label>
                 <input class="form-control" asp-for="FullName">
@@ -33,7 +33,7 @@
                 </select>
                 <span class="text-danger" asp-validation-for="DepartmentId"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" onclick="$('islepls').submit()" asp-action="Update" asp-controller="Worker" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>

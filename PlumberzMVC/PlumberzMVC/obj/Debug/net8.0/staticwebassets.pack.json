@@ -7945,8 +7945,16 @@
       "PackagePath": "staticwebassets\\imgs\\workers\\51zdmjbo.rkj.png"
     },
     {
+      "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\5pfn4tzb.pe1.png",
+      "PackagePath": "staticwebassets\\imgs\\workers\\5pfn4tzb.pe1.png"
+    },
+    {
       "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\amxirt4h.kx5.png",
       "PackagePath": "staticwebassets\\imgs\\workers\\amxirt4h.kx5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\fldi22o2.dwi.png",
+      "PackagePath": "staticwebassets\\imgs\\workers\\fldi22o2.dwi.png"
     },
     {
       "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\foibf2hn.oiw.png",
@@ -7971,6 +7979,10 @@
     {
       "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\yfvyqazr.cah.png",
       "PackagePath": "staticwebassets\\imgs\\workers\\yfvyqazr.cah.png"
+    },
+    {
+      "Id": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\zdlvwywl.31n.jpg",
+      "PackagePath": "staticwebassets\\imgs\\workers\\zdlvwywl.31n.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PlumberzMVC.Microsoft.AspNetCore.StaticWebAssets.props",

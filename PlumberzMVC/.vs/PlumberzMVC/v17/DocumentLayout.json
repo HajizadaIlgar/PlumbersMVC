@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\areas\\admin\\views\\worker\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\areas\\admin\\views\\worker\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\areas\\admin\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\areas\\admin\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\areas\\admin\\views\\worker\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\areas\\admin\\views\\worker\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\viewmodels\\workervm.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\viewmodels\\workervm.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\viewmodels\\workerlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\viewmodels\\workerlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\areas\\admin\\views\\worker\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\areas\\admin\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\areas\\admin\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\viewmodels\\workerlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\viewmodels\\workerlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|c:\\users\\ilqar\\desktop\\plumbersmvc\\plumberzmvc\\plumberzmvc\\viewmodels\\workervm.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FDD69238-D01D-475D-8C02-AC7C632A28A7}|PlumberzMVC\\PlumberzMVC.csproj|solutionrelative:plumberzmvc\\viewmodels\\workervm.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,32 +42,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "PlumberzMVC\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "PlumberzMVC\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Create.cshtml",
+              "RelativeDocumentMoniker": "PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Create.cshtml",
+              "RelativeToolTip": "PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T21:37:49.163Z",
+              "WhenOpened": "2025-01-18T14:37:33.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Update.cshtml",
+              "RelativeDocumentMoniker": "PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Update.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Update.cshtml",
+              "RelativeToolTip": "PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Update.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-18T14:05:14.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "WorkerController.cs",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Controllers\\WorkerController.cs",
               "RelativeDocumentMoniker": "PlumberzMVC\\Areas\\Admin\\Controllers\\WorkerController.cs",
               "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Controllers\\WorkerController.cs",
               "RelativeToolTip": "PlumberzMVC\\Areas\\Admin\\Controllers\\WorkerController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAgwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAFgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T21:33:47.447Z"
+              "WhenOpened": "2025-01-15T21:33:47.447Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -80,19 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "WorkerVM.cs",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\ViewModels\\WorkerVM.cs",
               "RelativeDocumentMoniker": "PlumberzMVC\\ViewModels\\WorkerVM.cs",
               "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\ViewModels\\WorkerVM.cs",
               "RelativeToolTip": "PlumberzMVC\\ViewModels\\WorkerVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T21:30:26.086Z"
+              "WhenOpened": "2025-01-15T21:30:26.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PlumberzMVC\\Controllers\\HomeController.cs",
@@ -100,25 +119,24 @@
               "RelativeToolTip": "PlumberzMVC\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAiwAsAAACDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T21:23:34.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T21:23:34.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PlumberzMVC\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "PlumberzMVC\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABABAAAAAAAAAAAiwBUBAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAiwBUBAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-15T21:19:49.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Index.cshtml",
               "RelativeDocumentMoniker": "PlumberzMVC\\Areas\\Admin\\Views\\Worker\\Index.cshtml",

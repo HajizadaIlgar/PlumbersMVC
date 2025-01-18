@@ -40,13 +40,13 @@ public class WorkerController : Controller
 
         if (!ModelState.IsValid)
         {
-            ViewBag.Categories = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Department = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
             return View(vm);
         }
 
         if (!await _context.Departments.AnyAsync(x => x.Id == vm.DepartmentId && !x.IsDeleted))
         {
-            ViewBag.Categories = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Department = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
             ModelState.AddModelError("DepartmentId", "Department not found or deleted");
             return View(vm);
         }
@@ -66,11 +66,11 @@ public class WorkerController : Controller
 
         await _context.Workers.AddAsync(worker);
         await _context.SaveChangesAsync();
-        return RedirectToAction("Index");
+        return RedirectToAction(nameof(Index));
     }
     public async Task<IActionResult> Update(int? id)
     {
-        if (id == null) return BadRequest();
+        if (id is null) return BadRequest();
         var data = await _context.Workers.Where(x => x.Id == id).Select(x => new WorkerUpdateVM
         {
             FullName = x.FullName,
@@ -78,27 +78,36 @@ public class WorkerController : Controller
             DepartmentId = x.DepartmentId ?? 0,
             FileUrl = x.ImageUrl,
         }).FirstOrDefaultAsync();
-        if (data == null) return NotFound();
-        ViewBag.Department = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
+        if (data is null) return NotFound();
+        if (ModelState.IsValid)
+        {
+            ViewBag.Department = await _context.Departments.Where(x => !x.IsDeleted).ToListAsync();
+        }
         return View(data);
     }
     [HttpPost]
     public async Task<IActionResult> Update(int? id, WorkerUpdateVM vm)
     {
-        if (id == null) return BadRequest();
+        if (id is null) return BadRequest();
+
         var data = await _context.Workers.Where(x => x.Id == id).FirstOrDefaultAsync();
+        var productImagePath = Path.Combine(_env.WebRootPath, "imgs", "workers");
+
         if (data == null) return NotFound();
+        data.FullName = vm.FullName;
+        data.Designation = vm.Designation;
+        data.DepartmentId = vm.DepartmentId;
+
         if (vm.Image is not null)
         {
-            vm.Id = data.Id;
-            vm.FullName = data.FullName;
-            vm.Designation = data.Designation;
-            vm.DepartmentId = data.DepartmentId ?? 0;
-            vm.FileUrl = data.ImageUrl;
-            await _context.SaveChangesAsync();
+            data.ImageUrl = await vm.Image.UploadAsync(productImagePath);
         }
+
+        await _context.SaveChangesAsync();
+
         return RedirectToAction(nameof(Index));
     }
+
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null) return BadRequest();

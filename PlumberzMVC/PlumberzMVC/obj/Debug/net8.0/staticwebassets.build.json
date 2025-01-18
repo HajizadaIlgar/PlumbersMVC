@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WH4UtvnAaOA/eN1EyU0B578ULD1Wyss2tDY9HagOVog=",
+  "Hash": "bPe2uo/FCESz8QTonE6mZPZNhLf3CzkKrDVzFy2Xv68=",
   "Source": "PlumberzMVC",
   "BasePath": "_content/PlumberzMVC",
   "Mode": "Default",
@@ -37770,6 +37770,25 @@
       "OriginalItemSpec": "wwwroot\\imgs\\workers\\51zdmjbo.rkj.png"
     },
     {
+      "Identity": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\5pfn4tzb.pe1.png",
+      "SourceId": "PlumberzMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\",
+      "BasePath": "_content/PlumberzMVC",
+      "RelativePath": "imgs/workers/5pfn4tzb.pe1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\workers\\5pfn4tzb.pe1.png"
+    },
+    {
       "Identity": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\amxirt4h.kx5.png",
       "SourceId": "PlumberzMVC",
       "SourceType": "Discovered",
@@ -37787,6 +37806,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\workers\\amxirt4h.kx5.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\fldi22o2.dwi.png",
+      "SourceId": "PlumberzMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\",
+      "BasePath": "_content/PlumberzMVC",
+      "RelativePath": "imgs/workers/fldi22o2.dwi.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\workers\\fldi22o2.dwi.png"
     },
     {
       "Identity": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\foibf2hn.oiw.png",
@@ -37901,6 +37939,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\workers\\yfvyqazr.cah.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\imgs\\workers\\zdlvwywl.31n.jpg",
+      "SourceId": "PlumberzMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ilqar\\Desktop\\PlumbersMVC\\PlumberzMVC\\PlumberzMVC\\wwwroot\\",
+      "BasePath": "_content/PlumberzMVC",
+      "RelativePath": "imgs/workers/zdlvwywl.31n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\workers\\zdlvwywl.31n.jpg"
     }
   ]
 }
