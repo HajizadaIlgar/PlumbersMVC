@@ -7,7 +7,6 @@ namespace PlumberzMVC.Contexts;
 public class PlumbersDbContext : IdentityDbContext<AppUser>
 {
     public PlumbersDbContext(DbContextOptions opt) : base(opt) { }
-
     public DbSet<Worker> Workers { get; set; }
     public DbSet<Department> Departments { get; set; }
 

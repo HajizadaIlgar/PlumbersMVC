@@ -1,4 +1,4 @@
-﻿using PlumberzMVC.Views.Account.Enums;
+﻿using PlumberzMVC.Models;
 
 namespace PlumberzMVC.Extensions
 {
@@ -8,8 +8,8 @@ namespace PlumberzMVC.Extensions
         {
             return role switch
             {
-                Roles.User => nameof(Roles.User),
-                Roles.Admin => nameof(Roles.Admin),
+                Roles.Admin => (nameof(Roles.Admin)),
+                Roles.User => (nameof(Roles.User)),
             };
         }
     }

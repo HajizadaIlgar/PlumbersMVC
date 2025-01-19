@@ -1,103 +1,162 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PlumberzMVC.Extensions;
 using PlumberzMVC.Models;
 using PlumberzMVC.ViewModels;
-using PlumberzMVC.Views.Account.Enums;
 
 namespace PlumberzMVC.Controllers
 {
-    public class AccountController(UserManager<AppUser> _userManager, RoleManager<IdentityRole> _roleManager, SignInManager<AppUser> _signInManager) : Controller
+    public class AccountController(UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager, RoleManager<IdentityRole> _roleManager) : Controller
     {
-        private bool IsAuthenticated => HttpContext.User.Identity?.IsAuthenticated ?? false;
-        public async Task<IActionResult> Register()
+        public bool IsAuthenticated => HttpContext.User.Identity?.IsAuthenticated ?? false;
+        public IActionResult Register()
         {
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM vm)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) return View();
+            AppUser user = new AppUser
             {
-                return View();
-            }
-            AppUser appuser = new AppUser
-            {
-                FullName = vm.Fullname,
+                FullName = vm.FullName,
                 Email = vm.Email,
-                UserName = vm.Username,
+                UserName = vm.UserName,
             };
-            var result = await _userManager.CreateAsync(appuser, vm.Password);
-            if (!result.Succeeded)
+            var usercreate = await _userManager.CreateAsync(user, vm.Password);
+
+            if (!usercreate.Succeeded)
             {
-                foreach (var err in result.Errors)
+                foreach (var err in usercreate.Errors)
                 {
                     ModelState.AddModelError("", err.Description);
                 }
+                return View(vm);
             }
-            var roleResult = await _userManager.AddToRoleAsync(appuser, Roles.User.GetRole());
-            if (!roleResult.Succeeded)
+            var roleresult = await _userManager.AddToRoleAsync(user, Roles.User.GetRole());
+            if (!roleresult.Succeeded)
             {
-                foreach (var err in roleResult.Errors)
+                foreach (var err in roleresult.Errors)
                 {
                     ModelState.AddModelError("", err.Description);
                 }
-                return View();
+                return View(vm);
             }
-            return View();
+
+            return RedirectToAction("Login", "Account");
         }
-        public async Task<IActionResult> MyRolesMethod()
-        {
-            foreach (Roles item in Enum.GetValues(typeof(Roles)))
-            {
-                await _roleManager.CreateAsync(new IdentityRole(item.GetRole()));
-            }
-            return Ok();
-        }
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM vm, string? returnUrl = null)
+        public async Task<IActionResult> Login(LoginVM vm, string? returUrl = null)
         {
-            if (IsAuthenticated) RedirectToAction("Index", "Home");
+            if (IsAuthenticated) return RedirectToAction("Index", "Home");
             if (!ModelState.IsValid) return View();
-            AppUser? user = null;
-            if (vm.UsernameOrEmail.Contains("@"))
+            AppUser user = null;
+            if (vm.UserNameorEmail.Contains("@"))
             {
-                user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
+                user = await _userManager.FindByEmailAsync(vm.UserNameorEmail);
             }
             else
             {
-                user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
+                user = await _userManager.FindByEmailAsync(vm.UserNameorEmail);
             }
+
+
+            //if (string.IsNullOrWhiteSpace(returUrl))
+            //{
+            //    if (await _userManager.IsInRoleAsync(user, "Admin"))
+            //    {
+            //        return RedirectToAction("Index", new { Controller = "Dashboard", Area = "Admin" });
+            //    }
+            //    return RedirectToAction("Index", "Home");
+            //}
+
             if (user is null)
             {
-                ModelState.AddModelError("", "Username Or Password is wrong!!!");
-                return View();
+                ModelState.AddModelError("", "Bele bir istifadeci tapilmadi !!!");
             }
-            var password = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
-            if (!password.Succeeded)
+            var result = await _signInManager.PasswordSignInAsync(user, vm.Password, false, true);
+            if (!result.Succeeded)
             {
-                if (password.IsLockedOut)
+                if (result.IsLockedOut)
                 {
-                    ModelState.AddModelError("", "Wait untill" + user.LockoutEnd.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                    ModelState.AddModelError("", "Sen 1 deqiqelik bloklandin gede");
                 }
-                if (password.IsNotAllowed)
+                if (result.IsNotAllowed)
                 {
-                    ModelState.AddModelError("", "Username or password is wrong");
+                    ModelState.AddModelError("", "username ve ya password sehvdi");
                 }
+                return View(vm);
             }
-            if (string.IsNullOrWhiteSpace(returnUrl))
+            return RedirectToAction("Index", "Home");
+        }
+        public async Task<IActionResult> MyRoleMethod()
+        {
+            // Admin istifadəçisini tapmaq
+            var data = await _userManager.FindByNameAsync("admin");
+
+            if (data == null)
             {
-                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                AppUser adminUser = new AppUser
                 {
-                    return RedirectToAction("Index", new { Controller = "Dashbard", Area = "Admin" });
+                    FullName = "Admin",
+                    UserName = "admin",
+                    Email = "admin@mail.com",
+                };
+
+                // Admin istifadəçisini yaratmaq
+                var adminCreateResult = await _userManager.CreateAsync(adminUser, "123456");
+
+                if (!adminCreateResult.Succeeded)
+                {
+                    return BadRequest("Admin istifadəçisini yaratmaq mümkün olmadı.");
                 }
-                return RedirectToAction("Index", "Home");
+
+                // Admin rolunu yoxlamaq və əlavə etmək
+                if (!await _roleManager.RoleExistsAsync(Roles.Admin.GetRole()))
+                {
+                    var roleResult = await _roleManager.CreateAsync(new IdentityRole(Roles.Admin.GetRole()));
+
+                    if (!roleResult.Succeeded)
+                    {
+                        return BadRequest("Admin rolu yaradılmadı.");
+                    }
+                }
+
+                // İstifadəçini rola əlavə etmək
+                var roleResultt = await _userManager.AddToRoleAsync(adminUser, Roles.Admin.GetRole());
+                if (!roleResultt.Succeeded)
+                {
+                    return BadRequest("Admin roluna əlavə edilmədi.");
+                }
             }
-            return LocalRedirect(returnUrl);
+
+            // Digər rolları yoxlamaq və yaradmaq
+            foreach (Roles item in Enum.GetValues(typeof(Roles)))
+            {
+                var roleName = item.GetRole();
+                if (!await _roleManager.RoleExistsAsync(roleName))
+                {
+                    var createRoleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));
+                    if (!createRoleResult.Succeeded)
+                    {
+                        return BadRequest($"Rol '{roleName}' yaradılmadı.");
+                    }
+                }
+            }
+
+            // Hər şey uğurla başa çatdı
+            return RedirectToAction("Login", "Account");
+        }
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

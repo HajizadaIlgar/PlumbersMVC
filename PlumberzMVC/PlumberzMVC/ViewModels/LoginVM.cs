@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlumberzMVC.ViewModels;
-public class LoginVM
+namespace PlumberzMVC.ViewModels
 {
-    public string UsernameOrEmail { get; set; }
-    [DataType(DataType.Password)]
-    public string Password { get; set; }
-    public bool RememberMe { get; set; }
+    public class LoginVM
+    {
+        [Required]
+        public string UserNameorEmail { get; set; }
+        [Required, DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
 }

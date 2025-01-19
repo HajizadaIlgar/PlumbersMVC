@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PlumberzMVC.Contexts;
 using PlumberzMVC.Extensions;
@@ -7,6 +8,8 @@ using PlumberzMVC.ViewModels;
 
 namespace PlumberzMVC.Areas.Admin.Controllers;
 [Area(nameof(Admin))]
+[Authorize(Roles = "Admin")]
+
 public class WorkerController : Controller
 {
     public readonly PlumbersDbContext _context;

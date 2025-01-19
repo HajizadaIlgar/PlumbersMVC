@@ -6,6 +6,7 @@ using PlumberzMVC.ViewModels;
 
 namespace PlumberzMVC.Areas.Admin.Controllers;
 [Area(nameof(Admin))]
+
 public class DepartmentController(PlumbersDbContext _context) : Controller
 {
     public async Task<IActionResult> Index()

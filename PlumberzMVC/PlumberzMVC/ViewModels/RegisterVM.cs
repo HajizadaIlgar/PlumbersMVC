@@ -1,16 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlumberzMVC.ViewModels;
-public class RegisterVM
+namespace PlumberzMVC.ViewModels
 {
-    [Required, MaxLength(64)]
-    public string Fullname { get; set; } = null!;
-    [Required, MaxLength(128), EmailAddress]
-    public string Email { get; set; } = null!;
-    [Required, MaxLength(128)]
-    public string Username { get; set; } = null!;
-    [Required, DataType(DataType.Password)]
-    public string Password { get; set; } = null!;
-    [Required, MaxLength(32), DataType(DataType.Password), Compare(nameof(Password))]
-    public string RePassword { get; set; }
+    public class RegisterVM
+    {
+        [Required, MaxLength(32), MinLength(9, ErrorMessage = "Full name 9 dan cox olsun gede")]
+        public string FullName { get; set; } = null!;
+        [Required, MaxLength(32), MinLength(3, ErrorMessage = "Full name 9 dan cox olsun gede")]
+        public string UserName { get; set; } = null!;
+        [Required, EmailAddress]
+        public string Email { get; set; } = null!;
+        [Required, DataType(DataType.Password)]
+        public string Password { get; set; } = null!;
+        [Required, DataType(DataType.Password), Compare("Password")]
+        public string RePassword { get; set; } = null!;
+    }
 }

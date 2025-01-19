@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlumberzMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+934099aae633b406b7b275f7060d8a5bfc98cd63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3575621aef57603753573740bee584eeb23b3e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlumberzMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlumberzMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
